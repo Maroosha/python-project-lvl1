@@ -1,6 +1,6 @@
 """Play an even-odd game with a user.
 
-Continue untill there are 3 correct answers in a row.
+Continue untill there are 3 correct answers in a row or a single failure.
 
 """
 
@@ -10,14 +10,14 @@ import prompt
 
 
 def oe_func(min_val, max_val):
-    """Even-odd game. Play until 3 correct answers in a row.
+    """Even-odd game. Play until 3 correct answers in a row or 1 failure.
 
     Parameters:
         min_val: min value in range of random int selection.
         max_val: max value in range of random int selection.
 
     Returns:
-        congrats to the user :3
+        congrats :3 or condolences :(
 
     """
     name = prompt.string('May I have your name? ')
@@ -36,9 +36,8 @@ def oe_func(min_val, max_val):
             print('Correct!')
             count += 1
         else:
-            if corr == 'yes':
-                print("'no' is a wrong answer ;(. Correct answer was 'yes'.")
-            if corr == 'no':
-                print("'yes' is a wrong answer ;(. Correct answer was 'no'.")
+            print(
+                '"{0}" is a wrong answer ;( '
+                'The correct answer is "{1}".'.format(answer, corr))
             return "Let's try again, {0}!".format(name)
     return print('Congratulations, {0}!'.format(name))

@@ -2,5 +2,6 @@
 dist/
 __pycache__
 *.pyc
+*.swo
 .pytest_cache/
 .vim
