@@ -36,7 +36,9 @@ def oe_func(min_val, max_val):
             print('Correct!')
             count += 1
         else:
-            print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-            print("Let's try again, {0}!".format(name))
-            count = 0
+            if corr == 'yes':
+                print("'no' is a wrong answer ;(. Correct answer was 'yes'.")
+            if corr == 'no':
+                print("'yes' is a wrong answer ;(. Correct answer was 'no'.")
+            return "Let's try again, {0}!".format(name)
     return print('Congratulations, {0}!'.format(name))
