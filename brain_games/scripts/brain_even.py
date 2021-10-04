@@ -3,14 +3,14 @@
 # !/usr/bin/env python3
 
 
-from brain_games.game_engine import welcome_user, engine
+from brain_games.game_engine import engine
 
 
 def main():
     """Play even-odd game.
 
     Returns:
-        congrats :3 or condolences :(
+        game engine function.
     """
     return engine('brain-even')
 

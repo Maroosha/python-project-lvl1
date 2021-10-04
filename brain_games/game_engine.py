@@ -4,6 +4,8 @@
 
 import prompt
 
+import brain_games.keys
+
 
 def welcome_user():
     """Welcome the user.
@@ -25,7 +27,6 @@ def engine(keyword):
         game output.
 
     """
-    import brain_games.keys
     message, func = brain_games.keys.keyfunc(keyword)
     print(welcome_user())
     name = prompt.string('May I have your name? ')
@@ -42,6 +43,7 @@ def engine(keyword):
         else:
             print(
                 '"{0}" is a wrong answer ;( '
-                'The correct answer is "{1}".'.format(answer, corr))
+                'The correct answer is "{1}".'.format(answer, corr),
+            )
             return "Let's try again, {0}!".format(name)
     return 'Congratulations, {0}!'.format(name)
