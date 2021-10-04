@@ -2,17 +2,17 @@
 
 # !/usr/bin/env python3
 
-from brain_games.evenodd_game import oe_func
+
+from brain_games.game_engine import welcome_user, engine
 
 
 def main():
     """Play even-odd game.
 
     Returns:
-        greetings.
+        congrats :3 or condolences :(
     """
-    print('Welcome to the Brain Games!')
-    return oe_func(min_val=1, max_val=50)
+    return engine('brain-even')
 
 
 if __name__ == '__main__':
