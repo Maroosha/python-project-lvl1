@@ -1,8 +1,4 @@
-"""Play an even-odd game with a user.
-
-Continue untill there are 3 correct answers in a row or a single failure.
-
-"""
+"""Play an even-odd game with a user."""
 
 
 import random
@@ -11,7 +7,7 @@ message = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def func():
-    """Even-odd game. Play until 3 correct answers in a row or 1 failure.
+    """Even-odd game.
 
     Returns:
         the game question and the correct answer.

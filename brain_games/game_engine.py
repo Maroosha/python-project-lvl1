@@ -18,7 +18,7 @@ def welcome_user():
 
 
 def engine(keyword):
-    """Brain Games engine.
+    """Brain Games engine. Play untill 3 correct answers or 1 faillure.
 
     Parameters:
         keyword: keyword of the game to be played.

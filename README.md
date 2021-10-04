@@ -6,3 +6,5 @@
 [![Actions Status](https://github.com/Maroosha/python-project-lvl1/workflows/run-linter/badge.svg)](https://github.com/Maroosha/python-project-lvl1/actions)
 
 https://asciinema.org/a/iJs3uDPaB8CUZN9rEMEfKlZtG
+
+https://asciinema.org/a/439920
