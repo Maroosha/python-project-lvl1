@@ -18,4 +18,6 @@ def keyfunc(keyword):
         from brain_games.games.calc_game import func, message
     elif keyword == 'brain-gcd':
         from brain_games.games.gcd_game import func, message
+    elif keyword == 'brain-progression':
+        from brain_games.games.progression_game import func, message
     return message, func
