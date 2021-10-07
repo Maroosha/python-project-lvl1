@@ -5,12 +5,12 @@
 
 [![Actions Status](https://github.com/Maroosha/python-project-lvl1/workflows/run-linter/badge.svg)](https://github.com/Maroosha/python-project-lvl1/actions)
 
-https://asciinema.org/a/iJs3uDPaB8CUZN9rEMEfKlZtG
+[![asciicast](https://asciinema.org/a/439330.svg)](https://asciinema.org/a/439330)
 
-https://asciinema.org/a/439920
+[![asciicast](https://asciinema.org/a/439920.svg)](https://asciinema.org/a/439920)
 
-https://asciinema.org/a/440079
+[![asciicast](https://asciinema.org/a/440079.svg)](https://asciinema.org/a/440079)
 
-https://asciinema.org/a/440281
+[![asciicast](https://asciinema.org/a/440281.svg)](https://asciinema.org/a/440281)
 
-https://asciinema.org/a/440291
+[![asciicast](https://asciinema.org/a/440291.svg)](https://asciinema.org/a/440291)
