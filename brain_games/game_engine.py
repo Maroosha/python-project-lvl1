@@ -44,6 +44,7 @@ def engine(func, message):
                 'Correct answer was "{1}".'.format(answer, corr),
             )
             print("Let's try again, {0}!".format(name))
-            return
-    print('Congratulations, {0}!'.format(name))
+            break
+    if count == 3:
+        print('Congratulations, {0}!'.format(name))
     return
