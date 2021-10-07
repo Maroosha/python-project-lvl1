@@ -5,12 +5,17 @@
 
 [![Actions Status](https://github.com/Maroosha/python-project-lvl1/workflows/run-linter/badge.svg)](https://github.com/Maroosha/python-project-lvl1/actions)
 
+## brain-games
 [![asciicast](https://asciinema.org/a/439330.svg)](https://asciinema.org/a/439330)
 
+## brain-calc
 [![asciicast](https://asciinema.org/a/439920.svg)](https://asciinema.org/a/439920)
 
+## brain-gcd
 [![asciicast](https://asciinema.org/a/440079.svg)](https://asciinema.org/a/440079)
 
+## brain-progression
 [![asciicast](https://asciinema.org/a/440281.svg)](https://asciinema.org/a/440281)
 
+## brain-prime
 [![asciicast](https://asciinema.org/a/440291.svg)](https://asciinema.org/a/440291)
