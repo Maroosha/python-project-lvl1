@@ -5,7 +5,7 @@
 
 [![Actions Status](https://github.com/Maroosha/python-project-lvl1/workflows/run-linter/badge.svg)](https://github.com/Maroosha/python-project-lvl1/actions)
 
-## brain-games
+## brain-games and brain-even
 [![asciicast](https://asciinema.org/a/439330.svg)](https://asciinema.org/a/439330)
 
 ## brain-calc
