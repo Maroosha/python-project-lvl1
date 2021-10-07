@@ -23,7 +23,7 @@ def engine(func, message):
         message: game message..
 
     Returns:
-        game output.
+        nothing.
 
     """
     print(welcome_user())
@@ -43,5 +43,7 @@ def engine(func, message):
                 '"{0}" is wrong answer ;( '
                 'Correct answer was "{1}".'.format(answer, corr),
             )
-            return "Let's try again, {0}!".format(name)
-    return 'Congratulations, {0}!'.format(name)
+            print("Let's try again, {0}!".format(name))
+            return
+    print('Congratulations, {0}!'.format(name))
+    return
