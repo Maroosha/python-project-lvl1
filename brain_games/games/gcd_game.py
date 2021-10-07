@@ -5,10 +5,10 @@
 
 import random
 
-message = 'Find the greatest common divisor of given numbers.'
+MESSAGE = 'Find the greatest common divisor of given numbers.'
 
 
-def func():
+def gcd():
     """Play the greatest common divisor game.
 
        Corr is evaluated using Euclidean algo for gcd.

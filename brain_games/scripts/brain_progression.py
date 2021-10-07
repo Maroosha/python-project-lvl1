@@ -4,6 +4,7 @@
 
 
 from brain_games.game_engine import engine
+from brain_games.games.progression_game import MESSAGE, progression
 
 
 def main():
@@ -12,7 +13,7 @@ def main():
     Returns:
         game engine function.
     """
-    return engine('brain-progression')
+    return engine(progression, MESSAGE)
 
 
 if __name__ == '__main__':

@@ -5,10 +5,10 @@
 
 import random
 
-message = 'What is the result of the expression?'
+MESSAGE = 'What is the result of the expression?'
 
 
-def func():
+def calc():
     """Play Calculator game.
 
     Returns:

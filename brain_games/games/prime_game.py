@@ -5,10 +5,10 @@
 
 import random
 
-message = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+MESSAGE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def func():
+def prime():
     """Play the prime-or-not-prime game.
 
     Returns:

@@ -11,7 +11,6 @@ def main():
     Returns:
         welcome_user() function
     """
-    print('Welcome to the Brain Games!')
     return welcome_user()
 
 

@@ -1,6 +1,7 @@
 .venv/
 dist/
 __pycache__
+*.swo
 *.pyc
 .pytest_cache/
 .vim

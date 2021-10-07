@@ -5,10 +5,10 @@
 
 import random
 
-message = 'What number is missing in the progression?'
+MESSAGE = 'What number is missing in the progression?'
 
 
-def func():
+def progression():
     """Play Progression game.
 
     Returns:
@@ -26,13 +26,13 @@ def func():
     start = random.randint(rand_range['min_val'], rand_range['max_val'])
     delta = random.randint(rand_range['delta_min'], rand_range['delta_max'])
     len_progr = random.randint(rand_range['len_min'], rand_range['len_max'])
-    progression = [start]
+    progressn = [start]
     for elem in range(1, len_progr):
-        progression.append(progression[elem - 1] + delta)
+        progressn.append(progressn[elem - 1] + delta)
     empty = random.choice(range(len_progr))
-    corr = str(progression[empty])   # correct answer
-    progression = [str(elemt) for elemt in progression]
-    progression[empty] = '..'
+    corr = str(progressn[empty])
+    progressn = [str(elemt) for elemt in progressn]
+    progressn[empty] = '..'
     question = ' '
-    question = question.join(progression)   # question
+    question = question.join(progressn)   # question
     return question, corr

@@ -4,6 +4,7 @@
 
 
 from brain_games.game_engine import engine
+from brain_games.games.gcd_game import MESSAGE, gcd
 
 
 def main():
@@ -12,7 +13,7 @@ def main():
     Returns:
         game engine function.
     """
-    return engine('brain-gcd')
+    return engine(gcd, MESSAGE)
 
 
 if __name__ == '__main__':
