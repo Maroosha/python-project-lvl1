@@ -3,7 +3,7 @@
 # !/usr/bin/env python3
 
 
-from brain_games.game_engine import engine
+from brain_games.engine import run_engine
 from brain_games.games.prime_game import MESSAGE, prime
 
 
@@ -13,7 +13,7 @@ def main():
     Returns:
         game engine function.
     """
-    return engine(prime, MESSAGE)
+    return run_engine(prime, MESSAGE)
 
 
 if __name__ == '__main__':

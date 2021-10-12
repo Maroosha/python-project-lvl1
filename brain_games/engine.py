@@ -15,7 +15,7 @@ def welcome_user():
     return 'Welcome to the Brain Games!'
 
 
-def engine(func, message):
+def run_engine(func, message):
     """Brain Games engine. Play untill 3 correct answers or 1 faillure.
 
     Parameters:

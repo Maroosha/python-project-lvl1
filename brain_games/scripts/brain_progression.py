@@ -3,7 +3,7 @@
 # !/usr/bin/env python3
 
 
-from brain_games.game_engine import engine
+from brain_games.engine import run_engine
 from brain_games.games.progression_game import MESSAGE, progression
 
 
@@ -13,7 +13,7 @@ def main():
     Returns:
         game engine function.
     """
-    return engine(progression, MESSAGE)
+    return run_engine(progression, MESSAGE)
 
 
 if __name__ == '__main__':
