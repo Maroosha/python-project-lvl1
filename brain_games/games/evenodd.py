@@ -5,10 +5,10 @@
 
 import random
 
-MESSAGE = 'Answer "yes" if the number is even, otherwise answer "no".'
+GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def evenodd():
+def evenodd_eval_qa():
     """Even-odd game.
 
     Returns:

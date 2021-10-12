@@ -5,10 +5,10 @@
 
 import random
 
-MESSAGE = 'What is the result of the expression?'
+GAME_RULE = 'What is the result of the expression?'
 
 
-def calc():
+def calc_eval_qa():
     """Play Calculator game.
 
     Returns:

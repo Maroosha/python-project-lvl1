@@ -5,10 +5,10 @@
 
 import random
 
-MESSAGE = 'What number is missing in the progression?'
+GAME_RULE = 'What number is missing in the progression?'
 
 
-def progression():
+def progression_eval_qa():
     """Play Progression game.
 
     Returns:

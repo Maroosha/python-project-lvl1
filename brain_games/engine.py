@@ -5,34 +5,24 @@
 import prompt
 
 
-def welcome_user():
-    """Welcome the user.
-
-    Returns:
-        welcome message.
-
-    """
-    return 'Welcome to the Brain Games!'
-
-
-def run_engine(func, message):
+def run_engine(game_function, game_rule):
     """Brain Games engine. Play untill 3 correct answers or 1 faillure.
 
     Parameters:
-        func: game function;
-        message: game message..
+        game_function: game function;
+        game_rule: game rule.
 
     Returns:
         nothing.
 
     """
-    print(welcome_user())
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
-    print(message)
+    print(game_rule)
     count = 0
     while count < 3:
-        question, corr = func()
+        question, corr = game_function()
         print('Question: {0}'.format(question))
         answer = prompt.string('Your answer: ')
         if answer == corr:

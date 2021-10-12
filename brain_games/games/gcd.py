@@ -5,10 +5,10 @@
 
 import random
 
-MESSAGE = 'Find the greatest common divisor of given numbers.'
+GAME_RULE = 'Find the greatest common divisor of given numbers.'
 
 
-def gcd():
+def gcd_eval_qa():
     """Play the greatest common divisor game.
 
        Corr is evaluated using Euclidean algo for gcd.

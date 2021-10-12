@@ -5,10 +5,10 @@
 
 import random
 
-MESSAGE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def prime():
+def prime_eval_qa():
     """Play the prime-or-not-prime game.
 
     Returns:
