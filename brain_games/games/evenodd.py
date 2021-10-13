@@ -9,6 +9,20 @@ GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 MIN_VALUE, MAX_VALUE = 1, 101
 
 
+def check_parity(num):
+    """
+    Check if the value is even or odd.
+
+    Parameters:
+        num: integer to be checked.
+
+    Returns:
+        'yes' if the value is even or 'no' if it is not
+
+    """
+    return 'yes' if num % 2 == 0 else 'no'
+
+
 def evenodd_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
     """Even-odd game.
 
@@ -21,8 +35,5 @@ def evenodd_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
 
     """
     question = random.randint(min_value, max_value)
-    if question % 2 == 0:
-        corr = 'yes'
-    else:
-        corr = 'no'
+    corr = check_parity(question)
     return question, corr
