@@ -23,9 +23,9 @@ def calc_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
     n1 = random.randint(min_value, max_value)
     n2 = random.randint(min_value, max_value)
     summ = '{0} + {1}'.format(n1, n2)
-    diff = '{0} - {1}'.format(n1, n2)
-    mult = '{0} * {1}'.format(n1, n2)
-    operations = {summ: n1 + n2, diff: n1 - n2, mult: n1 * n2}
+    remainder = '{0} - {1}'.format(n1, n2)
+    product = '{0} * {1}'.format(n1, n2)
+    operations = {summ: n1 + n2, remainder: n1 - n2, product: n1 * n2}
     question = random.choice(list(operations.keys()))
-    corr = str(operations[question])
-    return question, corr
+    correct_answer = str(operations[question])
+    return question, correct_answer

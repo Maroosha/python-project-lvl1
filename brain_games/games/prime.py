@@ -42,5 +42,5 @@ def prime_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
     """
     number = random.randint(min_value, max_value)
     question = '{0}'.format(number)
-    corr = check_primality(number)
-    return question, corr
+    correct_answer = check_primality(number)
+    return question, correct_answer

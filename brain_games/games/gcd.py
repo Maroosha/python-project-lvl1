@@ -42,5 +42,5 @@ def gcd_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
     number1 = random.randint(min_value, max_value)
     number2 = random.randint(min_value, max_value)
     question = '{0} {1}'.format(number1, number2)
-    corr = str(eval_gcd(number1, number2))
-    return question, corr
+    correct_answer = str(eval_gcd(number1, number2))
+    return question, correct_answer

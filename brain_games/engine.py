@@ -24,15 +24,15 @@ def run_engine(game_function, game_rule, attempts=ATTEMPT_NO):
     print('Hello, {0}!'.format(name))
     print(game_rule)
     for _ in range(attempts):
-        question, corr = game_function()
+        question, correct_answer = game_function()
         print('Question: {0}'.format(question))
         answer = prompt.string('Your answer: ')
-        if answer == corr:
+        if answer == correct_answer:
             print('Correct!')
         else:
             print(
                 '"{0}" is wrong answer ;( '
-                'Correct answer was "{1}".'.format(answer, corr),
+                'Correct answer was "{1}".'.format(answer, correct_answer),
             )
             print("Let's try again, {0}!".format(name))
             return

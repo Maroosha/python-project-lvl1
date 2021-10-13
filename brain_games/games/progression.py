@@ -29,7 +29,7 @@ def create_sequence(random_range):
 
     """
     a1 = random.randint(random_range['min_value'], random_range['max_value'])
-    # sticking to 'delta' instead of 'd' notation to satisfy WPS111 error
+    # sticking to delta instead of d notation to satisfy WPS111 and WPS120 error
     delta = random.randint(random_range['d_min'], random_range['d_max'])
     len_progression = random.randint(
         random_range['progression_len_min'],
@@ -67,8 +67,7 @@ def progression_eval_qa(random_range=RANDOM_RANGE):
     progressn = create_sequence(random_range)
     str_progressn = int_list_to_str_list(progressn)
     empty = random.choice(range(len(progressn)))
-    corr = str(progressn[empty])
+    correct_answer = str(progressn[empty])
     str_progressn[empty] = '..'
-    question = ' '
-    question = question.join(str_progressn)
-    return question, corr
+    question = ' '.join(str_progressn)
+    return question, correct_answer
