@@ -9,18 +9,18 @@ GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 MIN_VALUE, MAX_VALUE = 1, 101
 
 
-def check_parity(num):
+def check_parity(number):
     """
     Check if the value is even or odd.
 
     Parameters:
-        num: integer to be checked.
+        number: integer to be checked.
 
     Returns:
         'yes' if the value is even or 'no' if it is not
 
     """
-    return 'yes' if num % 2 == 0 else 'no'
+    return 'yes' if number % 2 == 0 else 'no'
 
 
 def evenodd_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
