@@ -9,10 +9,27 @@ GAME_RULE = 'Find the greatest common divisor of given numbers.'
 MIN_VALUE, MAX_VALUE = 1, 101
 
 
+def eval_gcd(number1, number2):
+    """
+    Evaluate the greatest common divisor via Euclidian algo for gcd.
+
+    Parameters:
+        number1: first integer;
+        number2: second integer.
+
+    Returns:
+        the greatest common divisor.
+    """
+    value1, value2 = max(number1, number2), min(number1, number2)
+    remainder = value1 % value2
+    while remainder != 0:
+        value1, value2 = value2, remainder
+        remainder = value1 % value2
+    return value2
+
+
 def gcd_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
     """Play the greatest common divisor game.
-
-       Corr is evaluated using Euclidean algo for gcd.
 
     Parameters:
         min_value: minimum in the range of random values;
@@ -22,13 +39,8 @@ def gcd_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
         the game question and the correct answer.
 
     """
-    n1 = random.randint(min_value, max_value)
-    n2 = random.randint(min_value, max_value)
-    question = '{0} {1}'.format(n1, n2)
-    num1, num2 = max(n1, n2), min(n1, n2)
-    remainder = num1 % num2
-    while remainder != 0:
-        num1, num2 = num2, remainder
-        remainder = num1 % num2
-    corr = str(num2)
+    number1 = random.randint(min_value, max_value)
+    number2 = random.randint(min_value, max_value)
+    question = '{0} {1}'.format(number1, number2)
+    corr = str(eval_gcd(number1, number2))
     return question, corr
