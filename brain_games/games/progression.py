@@ -4,35 +4,71 @@
 
 
 import random
+import types
 
 GAME_RULE = 'What number is missing in the progression?'
+RANDOM_RANGE = types.MappingProxyType({  # make a dictionary immutable
+    'min_value': 1,
+    'max_value': 101,
+    'd_min': 2,
+    'd_max': 10,
+    'progression_len_min': 5,
+    'progression_len_max': 10,
+})
 
 
-def progression_eval_qa():
+def create_sequence(random_range):
+    """
+    Create an arithmetic sequence.
+
+    Parameters:
+        random_range: dictionary of min and max values for random selection.
+
+    Returns:
+        arithmetic sequence as a list of integers.
+
+    """
+    a1 = random.randint(random_range['min_value'], random_range['max_value'])
+    # sticking to 'delta' instead of 'd' notation to satisfy WPS111 error
+    delta = random.randint(random_range['d_min'], random_range['d_max'])
+    len_progression = random.randint(
+        random_range['progression_len_min'],
+        random_range['progression_len_max'],
+    )
+    progressn = [a1]
+    for element in range(1, len_progression):
+        progressn.append(progressn[element - 1] + delta)
+    return progressn
+
+
+def int_list_to_str_list(int_list):
+    """
+    Convert a list of integers into a list of strings.
+
+    Parameters:
+        int_list: list of integers.
+
+    Returns:
+        list of strings.
+    """
+    return [str(element) for element in int_list]
+
+
+def progression_eval_qa(random_range=RANDOM_RANGE):
     """Play Progression game.
+
+    Parameters:
+        random_range: dictionary of min and max values for random selection.
 
     Returns:
         the game question and the correct answer.
 
     """
-    rand_range = {
-        'min_val': 1,
-        'max_val': 101,
-        'delta_min': 2,
-        'delta_max': 10,
-        'len_min': 5,
-        'len_max': 10,
-    }
-    start = random.randint(rand_range['min_val'], rand_range['max_val'])
-    delta = random.randint(rand_range['delta_min'], rand_range['delta_max'])
-    len_progr = random.randint(rand_range['len_min'], rand_range['len_max'])
-    progressn = [start]
-    for elem in range(1, len_progr):
-        progressn.append(progressn[elem - 1] + delta)
-    empty = random.choice(range(len_progr))
+    progressn = create_sequence(random_range)
+    str_progressn = int_list_to_str_list(progressn)
+    empty = random.choice(range(len(progressn)))
     corr = str(progressn[empty])
-    progressn = [str(elemt) for elemt in progressn]
-    progressn[empty] = '..'
+    str_progressn[empty] = '..'
     question = ' '
-    question = question.join(progressn)   # question
+    question = question.join(str_progressn)
     return question, corr

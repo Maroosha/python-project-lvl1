@@ -6,20 +6,24 @@
 import random
 
 GAME_RULE = 'Find the greatest common divisor of given numbers.'
+MIN_VALUE, MAX_VALUE = 1, 101
 
 
-def gcd_eval_qa():
+def gcd_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
     """Play the greatest common divisor game.
 
        Corr is evaluated using Euclidean algo for gcd.
+
+    Parameters:
+        min_value: minimum in the range of random values;
+        max_value: maximum in the range of random values.
 
     Returns:
         the game question and the correct answer.
 
     """
-    min_val, max_val = 1, 101
-    n1 = random.randint(min_val, max_val)
-    n2 = random.randint(min_val, max_val)
+    n1 = random.randint(min_value, max_value)
+    n2 = random.randint(min_value, max_value)
     question = '{0} {1}'.format(n1, n2)
     num1, num2 = max(n1, n2), min(n1, n2)
     remainder = num1 % num2

@@ -37,4 +37,3 @@ def run_engine(game_function, game_rule, attempts=ATTEMPT_NO):
             print("Let's try again, {0}!".format(name))
             return
     print('Congratulations, {0}!'.format(name))
-    return
