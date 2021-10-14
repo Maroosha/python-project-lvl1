@@ -1,4 +1,4 @@
-"""Play Progression game with a user."""
+"""Play the Guess-the-Progression-Element game with a user."""
 
 # !/usr/bin/env python3
 
@@ -7,7 +7,7 @@ import random
 import types
 
 GAME_RULE = 'What number is missing in the progression?'
-RANDOM_RANGE = types.MappingProxyType({  # make a dictionary immutable
+RANDOM_RANGE = types.MappingProxyType({     # make a dictionary immutable
     'min_value': 1,
     'max_value': 101,
     'd_min': 2,
@@ -29,7 +29,7 @@ def create_sequence(random_range):
 
     """
     a1 = random.randint(random_range['min_value'], random_range['max_value'])
-    # sticking to delta instead of d notation to satisfy WPS111 and WPS120 error
+    # sticking to delta instead of d notation to satisfy WPS111 and WPS120 errs
     delta = random.randint(random_range['d_min'], random_range['d_max'])
     len_progression = random.randint(
         random_range['progression_len_min'],
@@ -54,8 +54,8 @@ def int_list_to_str_list(int_list):
     return [str(element) for element in int_list]
 
 
-def progression_eval_qa(random_range=RANDOM_RANGE):
-    """Play Progression game.
+def progression_evaluate_qa(random_range=RANDOM_RANGE):
+    """Evaluate the Q&A for the Guess-the-Progression-Element game.
 
     Parameters:
         random_range: dictionary of min and max values for random selection.

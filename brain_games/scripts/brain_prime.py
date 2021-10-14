@@ -4,7 +4,7 @@
 
 
 from brain_games.engine import run_engine
-from brain_games.games.prime import GAME_RULE, prime_eval_qa
+from brain_games.games.prime import GAME_RULE, prime_evaluate_qa
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
     Returns:
         game engine function.
     """
-    return run_engine(prime_eval_qa, GAME_RULE)
+    return run_engine(prime_evaluate_qa, GAME_RULE)
 
 
 if __name__ == '__main__':

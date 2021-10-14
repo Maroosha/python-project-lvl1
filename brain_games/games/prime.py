@@ -1,4 +1,4 @@
-"""Play the prime-or-not-prime game with a user."""
+"""Play the Prime-or-Not game with a user."""
 
 # !/usr/bin/env python3
 
@@ -29,8 +29,8 @@ def check_primality(number):
     return 'yes'
 
 
-def prime_eval_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
-    """Play the prime-or-not-prime game.
+def prime_evaluate_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
+    """Evaluate the Q&A for the Prime-or-Not game.
 
     Parameters:
         min_value: minimum in the range of random values;
