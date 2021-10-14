@@ -19,10 +19,6 @@ def check_primality(number):
     Returns:
         'yes' if the value is prime; 'no' if it is not.
     """
-    if number == 1:
-        return 'yes'
-    if number == 2:
-        return 'yes'
     for element in range(2, number):
         if number % element == 0:
             return 'no'
