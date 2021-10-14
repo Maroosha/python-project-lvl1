@@ -4,16 +4,16 @@
 
 import prompt
 
-ATTEMPT_NO = 3
+ATTEMPT_MAX = 3
 
 
-def run_engine(game_function, game_rule, attempts=ATTEMPT_NO):
+def run_engine(game_function, game_rule, attempts=ATTEMPT_MAX):
     """Brain Games engine. Play untill 3 correct answers or 1 faillure.
 
     Parameters:
         game_function: game function;
         game_rule: game rule;
-        attempts: max number of attempts (constant).
+        attempts: max number of attempts.
 
     Returns:
         nothing.
