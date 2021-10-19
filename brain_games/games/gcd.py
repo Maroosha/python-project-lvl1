@@ -9,7 +9,7 @@ GAME_RULE = 'Find the greatest common divisor of given numbers.'
 MIN_VALUE, MAX_VALUE = 1, 101
 
 
-def evaluate_gcd(number1, number2):
+def get_gcd(number1, number2):
     """
     Evaluate the greatest common divisor via Euclidian algo for gcd.
 
@@ -33,10 +33,9 @@ def get_question_and_answer():
 
     Returns:
         the game question and the correct answer.
-
     """
     number1 = random.randint(MIN_VALUE, MAX_VALUE)
     number2 = random.randint(MIN_VALUE, MAX_VALUE)
     question = '{0} {1}'.format(number1, number2)
-    correct_answer = str(evaluate_gcd(number1, number2))
+    correct_answer = str(get_gcd(number1, number2))
     return question, correct_answer
