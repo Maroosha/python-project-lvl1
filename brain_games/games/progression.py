@@ -35,10 +35,10 @@ def create_sequence(random_range):
         random_range['progression_len_min'],
         random_range['progression_len_max'],
     )
-    progressn = [a1]
+    progression = [a1]
     for element in range(1, len_progression):
-        progressn.append(progressn[element - 1] + delta)
-    return progressn
+        progression.append(progression[element - 1] + delta)
+    return progression
 
 
 def int_list_to_str_list(int_list):
@@ -61,10 +61,10 @@ def get_question_and_answer():
         the game question and the correct answer.
 
     """
-    progressn = create_sequence(RANDOM_RANGE)
-    str_progressn = int_list_to_str_list(progressn)
-    empty = random.choice(range(len(progressn)))
-    correct_answer = str(progressn[empty])
-    str_progressn[empty] = '..'
-    question = ' '.join(str_progressn)
+    progression = create_sequence(RANDOM_RANGE)
+    string_progression = int_list_to_str_list(progression)
+    empty = random.choice(range(len(progression)))
+    correct_answer = str(progression[empty])
+    string_progression[empty] = '..'
+    question = ' '.join(string_progression)
     return question, correct_answer
