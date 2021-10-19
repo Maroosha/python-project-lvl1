@@ -22,8 +22,7 @@ def create_arithmetic_progression():
     Create an arithmetic progression.
 
     Returns:
-        arithmetic sequence as a list of integers.
-
+        arithmetic progression as a list of integers.
     """
     initial_term = random.randint(
         RANDOM_RANGE['min_value'],
@@ -43,17 +42,20 @@ def create_arithmetic_progression():
     return progression
 
 
-def int_list_to_str_list(int_list):
+def get_string_progression_with_empty_element(empty, progression):
     """
-    Convert a list of integers into a list of strings.
+    Get arithmetic progression as a list of str with an element to be guessed.
 
     Parameters:
-        int_list: list of integers.
+        empty: index of an element to be guessed;
+        progression: arithmetic progression.
 
     Returns:
-        list of strings.
+        progression as a list of strings with an element to be guessed.
     """
-    return [str(element) for element in int_list]
+    string_progression = [str(element) for element in progression]
+    string_progression[empty] = '..'
+    return ' '.join(string_progression)
 
 
 def get_question_and_answer():
@@ -63,9 +65,7 @@ def get_question_and_answer():
         the game question and the correct answer.
     """
     progression = create_arithmetic_progression()
-    string_progression = int_list_to_str_list(progression)
     empty = random.choice(range(len(progression)))
+    question = get_string_progression_with_empty_element(empty, progression)
     correct_answer = str(progression[empty])
-    string_progression[empty] = '..'
-    question = ' '.join(string_progression)
     return question, correct_answer
