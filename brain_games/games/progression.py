@@ -10,34 +10,36 @@ GAME_RULE = 'What number is missing in the progression?'
 RANDOM_RANGE = types.MappingProxyType({     # make a dictionary immutable
     'min_value': 1,
     'max_value': 101,
-    'd_min': 2,
-    'd_max': 10,
-    'progression_len_min': 5,
-    'progression_len_max': 10,
+    'common_difference_min': 2,
+    'common_difference_max': 10,
+    'number_of_terms_min': 5,
+    'number_of_terms_max': 10,
 })
 
 
-def create_sequence(random_range):
+def create_arithmetic_progression():
     """
-    Create an arithmetic sequence.
-
-    Parameters:
-        random_range: dictionary of min and max values for random selection.
+    Create an arithmetic progression.
 
     Returns:
         arithmetic sequence as a list of integers.
 
     """
-    a1 = random.randint(random_range['min_value'], random_range['max_value'])
-    # sticking to delta instead of d notation to satisfy WPS111 and WPS120 errs
-    delta = random.randint(random_range['d_min'], random_range['d_max'])
-    len_progression = random.randint(
-        random_range['progression_len_min'],
-        random_range['progression_len_max'],
+    initial_term = random.randint(
+        RANDOM_RANGE['min_value'],
+        RANDOM_RANGE['max_value'],
     )
-    progression = [a1]
-    for element in range(1, len_progression):
-        progression.append(progression[element - 1] + delta)
+    common_difference = random.randint(
+        RANDOM_RANGE['common_difference_min'],
+        RANDOM_RANGE['common_difference_max'],
+    )
+    number_of_terms = random.randint(
+        RANDOM_RANGE['number_of_terms_min'],
+        RANDOM_RANGE['number_of_terms_max'],
+    )
+    progression = [initial_term]
+    for element in range(1, number_of_terms):
+        progression.append(progression[element - 1] + common_difference)
     return progression
 
 
@@ -59,9 +61,8 @@ def get_question_and_answer():
 
     Returns:
         the game question and the correct answer.
-
     """
-    progression = create_sequence(RANDOM_RANGE)
+    progression = create_arithmetic_progression()
     string_progression = int_list_to_str_list(progression)
     empty = random.choice(range(len(progression)))
     correct_answer = str(progression[empty])
