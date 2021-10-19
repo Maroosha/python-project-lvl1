@@ -7,11 +7,11 @@ import prompt
 ROUNDS = 3
 
 
-def run_engine(game_function, game_rule):
+def run_engine(get_question_and_answer, game_rule):
     """Brain Games engine. Play untill 3 correct answers or 1 faillure.
 
     Parameters:
-        game_function: game function;
+        get_question_and_answer: game question and correct answer;
         game_rule: game rule.
 
     Returns:
@@ -23,7 +23,7 @@ def run_engine(game_function, game_rule):
     print('Hello, {0}!'.format(name))
     print(game_rule)
     for _ in range(ROUNDS):
-        question, correct_answer = game_function()
+        question, correct_answer = get_question_and_answer()
         print('Question: {0}'.format(question))
         answer = prompt.string('Your answer: ')
         if answer == correct_answer:
