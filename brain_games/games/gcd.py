@@ -28,19 +28,15 @@ def evaluate_gcd(number1, number2):
     return value2
 
 
-def gcd_evaluate_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
+def get_question_and_answer():
     """Evaluate the Q&A for the Greatest Common Divisor game.
-
-    Parameters:
-        min_value: minimum in the range of random values;
-        max_value: maximum in the range of random values.
 
     Returns:
         the game question and the correct answer.
 
     """
-    number1 = random.randint(min_value, max_value)
-    number2 = random.randint(min_value, max_value)
+    number1 = random.randint(MIN_VALUE, MAX_VALUE)
+    number2 = random.randint(MIN_VALUE, MAX_VALUE)
     question = '{0} {1}'.format(number1, number2)
     correct_answer = str(evaluate_gcd(number1, number2))
     return question, correct_answer

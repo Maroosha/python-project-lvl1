@@ -54,17 +54,14 @@ def int_list_to_str_list(int_list):
     return [str(element) for element in int_list]
 
 
-def progression_evaluate_qa(random_range=RANDOM_RANGE):
+def get_question_and_answer():
     """Evaluate the Q&A for the Guess-the-Progression-Element game.
-
-    Parameters:
-        random_range: dictionary of min and max values for random selection.
 
     Returns:
         the game question and the correct answer.
 
     """
-    progressn = create_sequence(random_range)
+    progressn = create_sequence(RANDOM_RANGE)
     str_progressn = int_list_to_str_list(progressn)
     empty = random.choice(range(len(progressn)))
     correct_answer = str(progressn[empty])

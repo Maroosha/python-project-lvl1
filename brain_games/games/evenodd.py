@@ -23,17 +23,13 @@ def check_parity(number):
     return 'yes' if number % 2 == 0 else 'no'
 
 
-def evenodd_evaluate_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
+def get_question_and_answer():
     """Evaluate the Q&A for the Even-Odd game.
-
-    Parameters:
-        min_value: minimum in the range of random values;
-        max_value: maximum in the range of random values.
 
     Returns:
         the game question and the correct answer.
 
     """
-    question = random.randint(min_value, max_value)
+    question = random.randint(MIN_VALUE, MAX_VALUE)
     correct_answer = check_parity(question)
     return question, correct_answer

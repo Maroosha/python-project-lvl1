@@ -25,18 +25,14 @@ def check_primality(number):
     return 'yes'
 
 
-def prime_evaluate_qa(min_value=MIN_VALUE, max_value=MAX_VALUE):
+def get_question_and_answer():
     """Evaluate the Q&A for the Prime-or-Not game.
-
-    Parameters:
-        min_value: minimum in the range of random values;
-        max_value: maximum in the range of random values.
 
     Returns:
         the game question and the correct answer.
 
     """
-    number = random.randint(min_value, max_value)
+    number = random.randint(MIN_VALUE, MAX_VALUE)
     question = '{0}'.format(number)
     correct_answer = check_primality(number)
     return question, correct_answer

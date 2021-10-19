@@ -4,7 +4,7 @@
 
 
 from brain_games.engine import run_engine
-from brain_games.games.progression import GAME_RULE, progression_evaluate_qa
+from brain_games.games.progression import GAME_RULE, get_question_and_answer
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
     Returns:
         game engine function.
     """
-    return run_engine(progression_evaluate_qa, GAME_RULE)
+    return run_engine(get_question_and_answer, GAME_RULE)
 
 
 if __name__ == '__main__':

@@ -4,16 +4,15 @@
 
 import prompt
 
-ATTEMPT_MAX = 3
+ROUNDS = 3
 
 
-def run_engine(game_function, game_rule, attempts=ATTEMPT_MAX):
+def run_engine(game_function, game_rule):
     """Brain Games engine. Play untill 3 correct answers or 1 faillure.
 
     Parameters:
         game_function: game function;
-        game_rule: game rule;
-        attempts: max number of attempts.
+        game_rule: game rule.
 
     Returns:
         nothing.
@@ -23,7 +22,7 @@ def run_engine(game_function, game_rule, attempts=ATTEMPT_MAX):
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
     print(game_rule)
-    for _ in range(attempts):
+    for _ in range(ROUNDS):
         question, correct_answer = game_function()
         print('Question: {0}'.format(question))
         answer = prompt.string('Your answer: ')
