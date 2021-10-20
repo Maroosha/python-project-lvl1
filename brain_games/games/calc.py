@@ -14,7 +14,6 @@ def get_question_and_answer():
 
     Returns:
         the game question and the correct answer.
-
     """
     number1 = random.randint(MIN_VALUE, MAX_VALUE)
     number2 = random.randint(MIN_VALUE, MAX_VALUE)

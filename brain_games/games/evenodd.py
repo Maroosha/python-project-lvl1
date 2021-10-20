@@ -19,7 +19,7 @@ def is_even(number):
         number: integer to be checked.
 
     Returns:
-        True if the value is even or False if it is not
+        True if the value is even or False if it is odd.
     """
     return number % 2 == 0
 

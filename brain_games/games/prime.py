@@ -19,7 +19,7 @@ def is_prime(number):
         number: integer to be checked.
 
     Returns:
-        'yes' if the value is prime; 'no' if it is not.
+        True if the value is prime; False if it is not.
     """
     for element in range(2, number):
         if number % element == 0:

@@ -16,7 +16,6 @@ def run_engine(get_question_and_answer, game_rule):
 
     Returns:
         nothing.
-
     """
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
