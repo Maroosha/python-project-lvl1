@@ -4,11 +4,9 @@
 
 
 import random
-import types
 
 GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 MIN_VALUE, MAX_VALUE = 1, 101
-PARITY_CHECK = types.MappingProxyType({True: 'yes', False: 'no'})
 
 
 def is_even(number):
@@ -31,5 +29,5 @@ def get_question_and_answer():
         the game question and the correct answer.
     """
     question = random.randint(MIN_VALUE, MAX_VALUE)
-    correct_answer = PARITY_CHECK[is_even(question)]
+    correct_answer = 'yes' if is_even(question) else 'no'
     return question, correct_answer
