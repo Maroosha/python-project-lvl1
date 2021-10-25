@@ -42,19 +42,19 @@ def create_arithmetic_progression():
     return progression
 
 
-def get_string_progression_with_empty_element(empty, progression):
+def stringify_progression(hidden_element, progression):
     """
     Get arithmetic progression as a list of str with an element to be guessed.
 
     Parameters:
-        empty: index of an element to be guessed;
+        hidden_element: index of an element to be guessed;
         progression: arithmetic progression.
 
     Returns:
         progression as a list of strings with an element to be guessed.
     """
     string_progression = [str(element) for element in progression]
-    string_progression[empty] = '..'
+    string_progression[hidden_element] = '..'
     return ' '.join(string_progression)
 
 
@@ -65,7 +65,7 @@ def get_question_and_answer():
         the game question and the correct answer.
     """
     progression = create_arithmetic_progression()
-    empty = random.choice(range(len(progression)))
-    question = get_string_progression_with_empty_element(empty, progression)
-    correct_answer = str(progression[empty])
+    hidden_element = random.choice(range(len(progression)))
+    question = stringify_progression(hidden_element, progression)
+    correct_answer = str(progression[hidden_element])
     return question, correct_answer
