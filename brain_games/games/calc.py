@@ -18,11 +18,11 @@ def get_question_and_answer():
     number1 = random.randint(MIN_VALUE, MAX_VALUE)
     number2 = random.randint(MIN_VALUE, MAX_VALUE)
     summ = '{0} + {1}'.format(number1, number2)
-    remainder = '{0} - {1}'.format(number1, number2)
+    difference = '{0} - {1}'.format(number1, number2)
     product = '{0} * {1}'.format(number1, number2)
     operations = {
         summ: number1 + number2,
-        remainder: number1 - number2,
+        difference: number1 - number2,
         product: number1 * number2,
     }
     question = random.choice(list(operations.keys()))
