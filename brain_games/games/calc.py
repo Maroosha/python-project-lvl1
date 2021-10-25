@@ -20,11 +20,11 @@ def get_question_and_answer():
     summ = '{0} + {1}'.format(number1, number2)
     difference = '{0} - {1}'.format(number1, number2)
     product = '{0} * {1}'.format(number1, number2)
-    operations = {
+    questions_to_answers = {
         summ: number1 + number2,
         difference: number1 - number2,
         product: number1 * number2,
     }
-    question = random.choice(list(operations.keys()))
-    correct_answer = str(operations[question])
+    question = random.choice(list(questions_to_answers.keys()))
+    correct_answer = str(questions_to_answers[question])
     return question, correct_answer
